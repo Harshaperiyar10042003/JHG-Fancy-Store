@@ -1,0 +1,231 @@
+/* Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #e7c2e7;
+    background: linear-gradient(45deg, #ff7f50, #6495ed);
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #333;
+}
+
+/* Home Section Styling */
+#home {
+    height: 100vh;
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    
+}
+
+.store-banner {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid white;
+    animation: bannerFadeIn 3s ease-in-out forwards ;
+    opacity: 0;
+}
+
+@keyframes bannerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.store-name {
+    font-size: 4em;
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    animation: bannerFadeIn 3s ease-in-out backwards ;
+}
+
+.slogan {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+/* About Section Styling */
+#about {
+    text-align: center;
+    background: #fff5d7;
+    padding: 4em;
+}
+
+.about-content {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 2em;
+    line-height: 1.6em;
+    
+}
+
+#about {
+    background: url('images/jhg\ banner\ .png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding: 4em 2em;
+    color: #fff;
+    opacity: 0.8;
+}
+
+#about::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+/* Product Section */
+.grid-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.grid-item h2 {
+    margin: 15px;
+    color: #333;
+}
+
+.grid-item p {
+    margin: 15px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+button {
+    display: block;
+    margin: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff5722;
+}
+
+/* Popup Styling for Product Details */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #f8e1f9;
+    padding: 2em;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%; /* Responsive width */
+    max-height: 80%; /* Prevents overflow */
+    text-align: center;
+    position: relative;
+    overflow: auto; /* Allows scrolling if content overflows */
+}
+
+.popup-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scales image to fit without distortion */
+    border-radius: 4px; /* Optional: Adds rounded corners */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+
+/* Contact Section */
+.contact-box {
+    background: #f9f9f9;
+    border: 2px solid #e09eff;
+    border-radius: 10px;
+    padding: 2em;
+    text-align: center;
+    margin: 2em auto;
+    max-width: 600px;
+}

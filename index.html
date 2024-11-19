@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHG Fancy Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="banner">
+            <img src="images/logo.png" alt="Store Banner" class="store-banner">
+            <h1 class="store-name">JHG Fancy Store</h1>
+            <p class="slogan">Where Style Meets Every Need!</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about">
+            <h1>ABOUT JHG FANCY STORE</h1>
+            <p class="about-content">
+                Welcome to JHG Fancy Store, your one-stop shop for all things trendy, fun, and functional! We cater specifically to students and young adults, providing a carefully curated selection of items that blend utility and style. From essential stationery items like notebooks, pens, and art supplies to tasty snack options for your study breaks, we’ve got everything you need to make your daily life easier and more enjoyable. Our goal is to bring you high-quality products that not only meet your everyday needs but also add a touch of creativity and inspiration to your routine. Whether you’re looking for stylish accessories like earrings, bracelets, and chains to match your outfit, or a selection of colorful makeup items to express your unique style, JHG Fancy Store has you covered. We also specialize in seasonal items, with festive products that bring color and excitement to every celebration. During festivals like Diwali, you’ll find an assortment of crackers and decorations that help you make the occasion extra memorable. Our ice cream section offers a variety of flavors to keep you cool and refreshed, making JHG Fancy Store a delightful stop for treats, too! At JHG Fancy Store, we believe in delivering products that not only look great but are also affordable, so you never have to compromise on quality or price. Our friendly team is dedicated to creating a warm shopping experience, ensuring you feel welcome every time you visit. Discover the joy of shopping in a place where style meets every need – right here at JHG Fancy Store!</p>
+
+        </div>
+    </section>
+
+    <section id="products">
+        <section class="grid-container">
+        <!-- Stationery Section -->
+        <div class="grid-item stationery" style="--color: #FFB6C1;" id="stationery">
+            <img src="images/stationery.jpg" alt="Stationery">
+            <h2>Stationery</h2>
+            <p>Explore our vibrant collection of pens, pencils, and notebooks.</p>
+            <button onclick="showProductDetail('stationery')">More Info</button>
+    </div>
+        <!-- Snacks Section -->
+        <div class="grid-item snacks" style="--color: #f4e590;" id="snacks">
+            <img src="images/snacks.jpg" alt="Snacks">
+            <h2>Snacks</h2>
+            <p>Delicious snacks for every craving.</p>
+            <button onclick="showProductDetail('snacks')">More Info</button>
+            
+        </div>
+        <!-- Ice Cream Section -->
+        <div class="grid-item ice-cream" style="--color: #cff19d;" id="ice-cream">
+            <img src="images/ice cream.jpg" alt="Ice Cream">
+            <h2>Ice Cream</h2>
+            <p>Creamy and delicious ice cream in various flavors.</p>
+            <button onclick="showProductDetail('iceCream')">More Info</button>
+            
+        </div>
+        <!-- Accessories Section -->
+        <div class="grid-item accessories" style="--color: #7caaa7;" id="accessories">
+            <img src="images/accesories.png" alt="Accessories">
+            <h2>Accessories</h2>
+            <p>Stylish accessories for all occasions.</p>
+            <button onclick="showProductDetail('accessories')">More Info</button>
+            
+        </div>
+        <!-- Makeup Section -->
+        <div class="grid-item makeup" style="--color: #FF69B4;" id="makeup">
+            <img src="images/makeup.png" alt="Makeup">
+            <h2>Makeup</h2>
+            <p>Quality makeup to enhance your beauty.</p>
+            <button onclick="showProductDetail('makeup')">More Info</button>
+            
+        </div>
+        <!-- Tailoring Section -->
+        <div class="grid-item tailoring" style="--color: #87CEFA;" id="tailoring">
+            <img src="images/tailoring materials.jpg" alt="Tailoring Materials">
+            <h2>Tailoring Materials</h2>
+            <p>Quality fabrics and materials for your tailoring needs.</p>
+            <button onclick="showProductDetail('tailoring')">More Info</button>
+            
+        </div>
+        <!-- Diwali Section -->
+        <div class="grid-item toys" style="--color: #f2c1b1;" id="toys">
+            <img src="images/toys.jpg" alt="Toys">
+            <h2>Toys</h2>
+            <p class="description">Discover fun and engaging toys for all ages!</p>
+            <button onclick="showProductDetail('toys')">More Info</button>
+        </div>   
+    
+        
+        <!-- Seasonal Section -->
+        <div class="grid-item seasonal" style="--color: #e4b1f2;" id="seasonal">
+            <img src="images/seasonal.png" alt="Seasonal Items">
+            <h2>Seasonal Items</h2>
+            <p>Special items for every season!</p>
+            <button onclick="showProductDetail('seasonal')">More Info</button>
+            
+        </div>
+        <div class="grid-item notebooks" style="--color: #b1d1e4;" id="notebooks">
+            <img src="images/note books.png" alt="Notebooks">
+            <h2>Notebooks</h2>
+            <p class="description">Explore a variety of notebooks crafted for all your study and creative needs!</p>
+            <button onclick="showProductDetail('notebooks')">More Info</button>
+        </div>
+        <div class="grid-item diwali" style="--color: #FFA07A;" id="diwali">
+            <img src="images/diwali.jpg" alt="Diwali Crackers">
+            <h2>Diwali Crackers</h2>
+            <p>Celebrate Diwali with our safe and colorful crackers.</p>
+            <button onclick="showProductDetail('diwali')">More Info</button>
+            
+        </div>
+        
+    </section>
+    <!-- Product Details Popup -->
+    <div id="product-detail-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="hideProductDetail()">&times;</span>
+            <div id="stationery-detail" class="product-info">
+                <h3>Stationery</h3>
+                <blockquote>
+                    "Stationery is the foundation of creativity and organization."
+                </blockquote>
+                <p>
+                    Discover pencils, erasers, paints, notebooks, and more. Ideal for both students and professionals.
+                </p>
+                <img src="images/pencils.jpg" alt="Pencil">
+                <img src="images/sharpners.jpg" alt="Paints">
+                <img src="images/Erasers.jpg" alt="Pens">
+                <img src="images/pens.png" alt="Pencil">
+                <img src="images/paints.jpg" alt="Paints">
+                <img src="images/clay.jpg" alt="Pens">
+            </div>
+            <div id="snacks-detail" class="product-info">
+                <h3>Snacks</h3>
+                <blockquote>
+                    "Snacks bring joy to every moment, big or small."
+                </blockquote>
+                <p>
+                    Indulge in a variety of treats like chips, candies, lollipops, and biscuits. Perfect for satisfying cravings anytime.
+                </p>
+                <img src="images/lays.jpg" alt="Chips">
+                <img src="images/candy.jpg" alt="Candy">
+                <img src="images/lollipop.jpg" alt="Lollipop">
+                <img src="images/biscuits.jpg" alt="Biscuits">
+            </div>
+            <div id="iceCream-detail" class="product-info">
+                <h3>Ice Cream</h3>
+                <blockquote>
+                    "Every scoop of ice cream is a little moment of happiness."
+                </blockquote>
+                <p>
+                    Treat yourself to a delightful variety, including cones, cups, choco bars, pots, and kulfi. A perfect way to cool down and savor the day.
+                </p>
+                <img src="images/cone.png" alt="Ice Cream Cone">
+                <img src="images/cups.png" alt="Ice Cream Cups">
+                <img src="images/choco bar.jpg" alt="Choco Bar">
+                <img src="images/pot.jpg" alt="Ice Cream Pot">
+                <img src="images/kulfi.png" alt="Kulfi">
+            </div>
+            <div id="accessories-detail" class="product-info">
+                <h3>Accessories</h3>
+                <blockquote>
+                    "Accessories are the perfect touch to express your unique style."
+                </blockquote>
+                <p>
+                    Explore a wide selection of earrings, rings, clips, hair bands, and chains. Stylish options for all ages and occasions.
+                </p>
+                <img src="images/earings.jpg" alt="Earrings">
+                <img src="images/ring.jpg" alt="Ring">
+                <img src="images/boho rings.jpg" alt="Boho Rings">
+                <img src="images/boys rings.avif" alt="Rings for Boys">
+                <img src="images/clipp.jpg" alt="Clip">
+                <img src="images/clip for childresn.jpg" alt="Children's Clip">
+                <img src="images/chian.jpg" alt="Chain">
+                <img src="images/hair band.jpg" alt="Hair Band">
+                <img src="images/butterfly.jpg" alt="Butterfly Accessory">
+                <img src="images/band.jpg" alt="Fashion Band">
+            </div>
+            <div id="makeup-detail" class="product-info">
+                <h3>Makeup</h3>
+                <blockquote>
+                    "Makeup is an art, and every product is a brush to create your masterpiece."
+                </blockquote>
+                <p>
+                    Discover a variety of makeup essentials, including creams, lipsticks, eyeshadows, foundations, and nail polishes. Perfect for every occasion and style.
+                </p>
+                <img src="images/items.jpg" alt="Makeup Items">
+                <img src="images/cream.webp" alt="Cream">
+                <img src="images/lipstick.png" alt="Lipstick">
+                <img src="images/eye shadow.webp" alt="Eyeshadow">
+                <img src="images/creams.webp" alt="Skin Creams">
+                <img src="images/foundations.avif" alt="Foundation">
+                <img src="images/nailpolish.webp" alt="Nail Polish">
+            </div>
+            <div id="tailoring-detail" class="product-info">
+                <h3>Tailoring</h3>
+                <blockquote>
+                    "Tailoring tools are the threads that weave creativity into reality."
+                </blockquote>
+                <p>
+                    Find essential tailoring items like buttons, scissors, needles, threads, and more. Perfect for crafting and designing with precision.
+                </p>
+                <img src="images/taill things.avif" alt="Tailoring Essentials">
+                <img src="images/buttons.webp" alt="Buttons">
+                <img src="images/scisors.webp" alt="Scissors">
+                <img src="images/needle.webp" alt="Needles">
+                <img src="images/thread.jpg" alt="Threads">
+            </div>
+            <div id="toys-detail" class="product-info">
+                <h3>Toys & School Supplies</h3>
+                <blockquote>
+                    "Play is the work of childhood, and learning is its foundation."
+                </blockquote>
+                <p>
+                    Discover an exciting range of toys, including teddy bears, cars, building blocks, puzzles, and school supplies. Perfect for fun and learning for kids of all ages.
+                </p>
+                <img src="images/teddy.avif" alt="Teddy Bear">
+                <img src="images/cars.webp" alt="Toy Car">
+                <img src="images/building-blocks.jpg" alt="Building Blocks">
+                <img src="images/puzzle.webp" alt="Puzzle Game">
+                <img src="images/doll.jpg" alt="Doll">
+                <img src="images/cryons.jpg" alt="Colorful Crayons">
+                <img src="images/naruto.webp" alt="naruto">
+                <img src="images/water bottles.avif" alt="Kids Water Bottle">
+                <img src="images/sketch book.webp" alt="Sketchbook for Kids">
+                <img src="images/balls.jpg" alt="Toy Ball">
+                <img src="images/train set.jpg" alt="Toy Train Set">
+                <img src="images/super heros.webp" alt="Action Figure">
+            </div> 
+            <div id="seasonal-detail" class="product-info">
+                <h3>Seasonal Items</h3>
+                <blockquote>
+                    "Celebrate every season with joy and tradition."
+                </blockquote>
+                <p>
+                    Explore our seasonal collection, featuring flags for Republic Day, gifts for Valentine's Day, and friendship bands for Friendship Day. Perfect for celebrating special moments with loved ones.
+                </p>
+                <img src="images/republic-day-flag.jpg" alt="Republic Day Flag">
+                <img src="images/valentine-gifts.jpg" alt="Valentine's Day Gifts">
+                <img src="images/friendship and.jpg" alt="Friendship Band">
+                <img src="images/republic-day-gift.jpg" alt="Republic Day Gift">
+                <img src="images/Valentine's Day Cards.jpg" alt="Valentine's Day Cards">
+                <img src="images/heart ballons.jpg" alt="Valentine's Day Heart Pillow">
+                <img src="images/Republic Day Decorations.jpg" alt="Republic Day Decorations">
+                <img src="images/baloons.jpg" alt="Love Balloons for Valentine's Day">
+                <img src="images/cards.jpg" alt="Handmade Cards for Friendship Day">
+                <img src="images/Valentine's Gift Basket.jpg" alt="Gift Basket for Valentine's Day">
+                <img src="images/photo frames.jpg" alt="Friendship Day Photo Frame">
+                <img src="images/gifts.jpg" alt="gifts">
+            </div> 
+            <div id="notebooks-detail" class="product-info">
+                <h3>Notebooks</h3>
+                <blockquote>
+                    "The pages are empty, waiting to capture your thoughts and creativity."
+                </blockquote>
+                <p>
+                    Discover our diverse range of notebooks, from long-sized notes to small-sized ones, perfect for students, professionals, and creative minds. We also offer graph notes, record notes, and specialized notebooks for accounts, all designed to meet your unique writing and organizational needs.
+                </p>
+                <img src="images/vetri.jpg" alt="vetri">
+                <img src="images/long-size-notebook.jpg" alt="Long Size Notebook">
+                <img src="images/medium-size-notebook.jpg" alt="Medium Size Notebook">
+                <img src="images/small-size-notebook.jpg" alt="Small Size Notebook">
+                <img src="images/graph-notebook.jpg" alt="Graph Notebook">
+                <img src="images/record-notebook.jpg" alt="Record Notebook">
+                <img src="images/two-line-notebook.jpg" alt="Two Line Notebook">
+                <img src="images/four-line-notebook.jpg" alt="Four Line Notebook">
+                <img src="images/accounts-notebook.jpg" alt="Accounts Notebook">
+            </div>
+            <div id="diwali-detail" class="product-info">
+                <h3>Diwali Crackers</h3>
+                <blockquote>
+                    "Light up your Diwali with joy, color, and sparkle!"
+                </blockquote>
+                <p>
+                    Celebrate the festival of lights with our extensive collection of Diwali crackers. From sparkling sparklers to colorful rockets and ground-based crackers, we offer a variety of options to enhance your Diwali celebrations. Enjoy the safe and fun-filled festivities with our premium-quality crackers that bring joy to your home and family.
+                </p>
+                <img src="images/sparkler.jpg" alt="Sparkler">
+                <img src="images/flower-pot.jpg" alt="Flower Pot">
+                <img src="images/rocket.jpg" alt="Rocket">
+                <img src="images/ground-chakkar.jpg" alt="Ground Chakkar">
+                <img src="images/air-bombs.jpg" alt="Air Bombs">
+                <img src="images/atomic-crackers.jpg" alt="Atomic Crackers">
+                <img src="images/cracker-pack.jpg" alt="Cracker Pack">
+            </div>
+            
+        </div>
+    </div>
+    </section>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-box">
+        <h2>Contact Us</h2>
+        <p>Email: harshaperiyar@gmail.com</p>
+        <p>Phone: 7010965469</p>
+        <p>Address: NO:13/22A, Pudhu street, Kallikuppam, Ambattur, Chennai-53</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
